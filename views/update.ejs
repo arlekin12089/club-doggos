@@ -1,0 +1,40 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+<section class="hero__wrap--registration">
+	<div class="container">
+		<h1>Update info</h1>
+	</div>
+</section>
+<main class="main">
+	<div class="container">
+		<section class="form-section">
+		<h2>Update info</h2>
+		<form action="/update/<%=_id %>" method="post">
+			<div class="form-field">
+				<label for="username">Name:</label>
+				<input type="text" name="username" id="username" value="<%= username %>" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Email:</label>
+				<input type="email" name="email" id="email" value="<%= email %>" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Phone:</label>
+				<input type="tel" name="phone" id="phone" value="<%= phone %>" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Date:</label>
+				<input type="date" name="date" id="date" value="<%= date %>" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Favourite breed:</label>
+				<input type="text" name="breed" id="breed" value="<%= breed %>" required>
+			</div>
+			<div class="form-field">
+				<button type="submit" class="btn btn--pink">Update info</button>
+			</div>
+		</form>
+		</section>	
+	</div>
+</main>
+<%- include('./partials/footer.ejs') %>

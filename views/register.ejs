@@ -1,0 +1,41 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+<section class="hero__wrap--registration">
+	<div class="container">
+		<h1>Registration</h1>
+	</div>
+</section>
+<main class="main">
+	<div class="container">
+	<section class="form-section">
+		<h2>Sign up</h2>
+		<form action="/users/register" method="post" id="userForm">
+			<div class="form-field">
+				<label for="username">Name:</label>
+				<input type="text" name="username" id="username" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Email:</label>
+				<input type="email" name="email" id="email" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Phone:</label>
+				<input type="tel" name="phone" id="phone" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Date:</label>
+				<input type="date" name="date" id="date" required>
+			</div>
+			<div class="form-field">
+				<label for="username">Favourite breed:</label>
+				<input type="text" name="breed" id="breed" required>
+			</div>
+			<div class="form-field">
+				<button type="submit" class="btn btn--pink">Create user</button>
+			</div>
+		</form>
+		</section>	
+	</div>
+</main>
+
+<%- include('./partials/footer.ejs') %>

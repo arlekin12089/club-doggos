@@ -1,0 +1,501 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	font-family: 'Roboto', sans-serif;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 100%;
+	max-width: 1200px;
+}
+
+.header .nav .logo {
+	width: 120px;
+}
+
+.header .nav .logo img {
+	max-width: 100%;
+}
+
+.header {
+	height: 70px;
+}
+
+.header .nav {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 0;
+}
+
+.main-menu {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+}
+
+.main-menu li {
+	margin: 0 40px 0 0;
+	display: inline-block;
+	position: relative;
+	line-height: 0;
+}
+
+.main-menu a {
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.7px;
+	font-weight: 600;
+	color: #000;
+	padding: 34px 6px;
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+.hero__wrap,
+.hero__wrap--users,
+.hero__wrap--registration,
+.hero__wrap--user {
+	position: relative;
+	min-height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(/img/cover.jpeg);
+}
+
+.hero__wrap--users {
+	background-image: url(/img/users-cover.jpeg);
+}
+
+.hero__wrap--registration {
+	background-image: url(/img/register-cover.jpeg);
+}
+
+.hero__wrap--user {
+	background-image: url(/img/user-cover.jpeg);
+}
+
+.hero__wrap:before,
+.hero__wrap--users::before,
+.hero__wrap--registration::before,
+.hero__wrap--user::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.78);
+}
+
+.hero__wrap h1,
+.hero__wrap--users h1,
+.hero__wrap--registration h1,
+.hero__wrap--user h1 {
+	font-size: 80px;
+	line-height: 81px;
+	text-align: center;
+	position: relative;
+	color: #fff;
+}
+
+body a:hover {
+	color: #FF4880;
+}
+
+.about {
+	padding: 4.3rem 0;
+	display: flex;
+}
+
+.about aside {
+	width: 60%;
+	padding: 20px;
+}
+
+.about-members {
+	text-align: center;
+}
+
+.about aside h2 {
+	font-size: 40px;
+	line-height: 50px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.about-text {
+	line-height: 31px;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+.about-text p {
+	margin-bottom: 15px;
+}
+
+.home__cover {
+	width: 40%;
+	padding: 20px;
+}
+
+.home__cover img {
+	max-width: 100%;
+}
+
+.footer {
+	background: rgb(47, 47, 47);
+	padding: 2em 0;
+	color: #fff;
+}
+
+.footer ul {
+	margin-bottom: 50px;
+}
+
+.footer li {
+	margin-bottom: 10px;
+}
+
+.footer a {
+	text-decoration: underline;
+	color: rgb(211, 255, 250);
+}
+
+.footer p {
+	color: rgb(211, 255, 250);
+	text-align: center;
+}
+
+.footer .social {
+	display: flex;
+	align-items: center;
+}
+
+.footer .social li {
+	margin: 0 10px;
+}
+
+.footer .social li a {
+	font-size: 25px;
+}
+
+.footer-contact {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	font-size: 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-family: "Roboto", Verdana, sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.1px;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	height: 40px;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn--pink {
+	background-color: #ff4880;
+}
+
+.btn--pink:hover {
+	background-color: #ffae00;
+	color: #000;
+}
+
+.users-list {
+	padding: 20px;
+}
+
+.users-list ul {
+	display: flex;
+}
+
+.users-list ul li {
+	margin-bottom: 20px;
+	flex-basis: 15%;
+	text-align: center;
+	padding: 10px;
+}
+
+.users-list ul li a {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.users-list ul li img {
+	width: 120px;
+}
+
+.users-list ul li p {
+	margin-top: 20px;
+	color: #000;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.users-list ul li a:hover p {
+	color: #FF4880;
+}
+
+.sort-users {
+	padding: 40px 20px 20px;
+}
+
+.sort-users h2 {
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+
+.sort-users a {
+	margin-right: 20px;
+	color: #000;
+	font-weight: 600;
+}
+
+.sort-users a i {
+	color: #FF4880;
+	padding-right: 10px;
+}
+
+.form-field {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-field input {
+	margin-bottom: 10px;
+	border-radius: 5px;
+	padding: 12px 15px;
+	background: #ffffff;
+	border: 1px solid black;
+}
+
+.form-field label {
+	font-weight: 600;
+	margin-bottom: 5px;
+	font-size: 18px;
+}
+
+.input_field {
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1.3px solid;
+}
+
+.user {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0;
+}
+
+.user-photo {
+	width: 40%;
+	padding: 20px;
+}
+
+.user-photo img {
+	max-width: 100%;
+}
+
+.user-info {
+	width: 60%;
+	padding: 20px;
+}
+
+.user-info li {
+	margin-bottom: 20px;
+}
+
+.user-info p i {
+	color: #FF4880;
+	font-weight: 600;
+	padding-right: 10px;
+}
+
+.user-info a i {
+	padding-right: 10px;
+}
+
+.user-info h2 {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.form-section {
+	max-width: 500px;
+	margin: 50px auto;
+}
+
+.form-section h2 {
+	font-size: 22px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.error-404 {
+text-align: center;
+margin: 40px auto;
+}

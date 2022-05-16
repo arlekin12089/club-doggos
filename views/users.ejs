@@ -1,0 +1,39 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+<section class="hero__wrap--users">
+	<div class="container">
+		<h1>Users</h1>
+	</div>
+</section>
+<main class="main">
+	<div class="container">
+		<ul class="sort-users">
+			<h2>Sort users</h2>
+			<a href="/users?=sortOrder"><i class="fa fa-sort" aria-hidden="true"></i> By default</a>
+			<a href="/users?sortOrder=asc"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>Sort Alphabetically (A to Z)</a>
+			<a href="/users?sortOrder=desc"><i class="fa fa-sort-alpha-desc" aria-hidden="true"></i>Sort Alphabetically (Z to A)</a>
+		</ul>
+		<section class="users-list">
+			<ul id="users">
+			<% if(users.length===0){%> 
+				<p>There are no users :(</p>
+			<%}%>
+				<% users.forEach( user =>{ %>
+				<li>
+					<a href="/user/<%= user._id %>">
+						<img src="/img/avatar-user.jpeg" alt="User avatar">
+						<p><%= user.username%> </p>
+					</a>
+				</li>
+			<% }) %>
+		</ul>
+		</section>
+	</div>
+</main>
+
+
+
+<%- include('./partials/footer.ejs') %>
+
+

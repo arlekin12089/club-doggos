@@ -1,0 +1,42 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+<section class="hero__wrap--user">
+	<div class="container">
+		<h1><%= username %></h1>
+	</div>
+</section>
+<main class="main">
+	<div class="container">
+		<section class="user">
+			<div class="user-photo">
+				<img src="/img/avatar-user.jpeg" alt="User avatar">
+			</div>
+			<div class="user-info">
+				<ul>
+					<li>
+						<h2><i class="fa fa-user-circle-o" aria-hidden="true"></i> <%= username %></h2>
+					</li>
+					<li>
+						<p><i class="fa fa-envelope-o" aria-hidden="true"></i> <%= email %></p>
+					</li>
+					<li>
+						<p><i class="fa fa-phone" aria-hidden="true"></i> <%= phone %></p>
+					</li>
+					<li>
+						<p><i class="fa fa-calendar" aria-hidden="true"></i><%= date %></p>
+					</li>
+					<li>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> <%= breed %></p>
+					</li>
+				</ul>
+				<a href="/update/<%= _id%>" class="btn btn--pink"><i class="fa fa-pencil" aria-hidden="true"></i> Edit user</a>
+				<a id="deleteUser" href="/user/delete/<%= _id  %> " class="btn btn--pink"> <i class="fa fa-trash-o" aria-hidden="true"></i>Delete user</a> 
+			</div>
+		</section>
+
+	</div>
+</main>
+
+<%- include('./partials/footer.ejs') %>
+
